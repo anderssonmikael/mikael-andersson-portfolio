@@ -71,7 +71,7 @@ main {
   align-items: center;
   padding: 1em;
   background-color: var(--verdigris);
-  max-width: min(1000px, 90%);
+  max-width: min(1200px, 90%);
   border-radius: 2em;
 }
 
