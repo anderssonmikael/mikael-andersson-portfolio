@@ -1,0 +1,272 @@
+:root {
+  --jetblack: #202c39;
+  --deepblue: #1f1976;
+  --white: #ffffff;
+  --alabastergrey: #e6e8e6;
+  --verdigris: #81e9db;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Oxygen, Poppins, sans-serif;
+  color: var(--jetblack);
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: Poppins, Oxygen, sans-serif;
+}
+
+/* Navigation menu styling */
+
+.navbar {
+  background-color: var(--jetblack);
+  padding: 10px;
+}
+
+.navbar-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style-type: none;
+  gap: 1em;
+}
+
+.navbar-list li:first-child {
+  font-family: Poppins, Oxygen, sans-serif;
+  font-weight: 600;
+}
+
+.navbar-list li a {
+  color: var(--alabastergrey);
+  text-decoration: none;
+}
+
+/* Main styling */
+
+main {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  flex: 1;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-color: var(--verdigris);
+  max-width: min(1000px, 90%);
+  border-radius: 2em;
+}
+
+.hero img {
+  margin-top: 1em;
+  max-width: min(60%, 400px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  transition: border-radius 0.5s ease-in-out;
+}
+
+.hero-text {
+  flex: 0 1 30em;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+.hero-text h2 {
+  margin: 1em 0 1em 0;
+  font-size: 1.25rem;
+  font-family: Helvetica, sans-serif;
+}
+
+h2 strong {
+  color: var(--deepblue);
+  font-weight: 600;
+}
+
+.description {
+  display: none;
+  transition: display 1s ease-in-out;
+}
+
+.cta-button {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--jetblack);
+  background-color: var(--white);
+  padding: 1em 1.25em;
+  border-radius: 1em;
+  font-weight: 500;
+  margin-top: 0.5em;
+  transition: border-radius 0.1s ease-in-out;
+}
+
+.about {
+  background-color: var(--verdigris);
+  width: min(1200px, 90%);
+  margin: 1em;
+  padding: 1em;
+  border-radius: 2em;
+}
+
+.about h1 {
+  text-align: center;
+}
+
+.grid-container {
+  padding: 1em;
+  display: grid;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--verdigris);
+  font-size: 2rem;
+  color: var(--jetblack);
+}
+
+.bento-grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "box-1 box-2 box-3 box-4"
+    "box-1 box-5 box-5 box-4"
+    "box-6 box-5 box-5 box-7"
+    "box-8 box-8 box-9 box-7";
+  gap: 1em;
+}
+
+.contact {
+  justify-self: center;
+  width: 100%;
+  max-width: 440px;
+  margin: 1rem;
+  padding: 2rem;
+  background: var(--verdigris);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact h1 {
+  margin: 0 0 1.5rem;
+  font-size: 1.75rem;
+  color: var(--jetblack);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+label {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--deepblue);
+}
+
+input,
+textarea {
+  padding: 0.7rem 0.9rem;
+  font: inherit;
+  color: var(--jetblack);
+  background: #fff;
+  border: 1px solid var(--alabastergrey);
+  border-radius: 8px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-button {
+  width: 100%;
+  padding: 0.8rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--alabastergrey);
+  background: var(--jetblack);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Footer */
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0.5em;
+  background-color: var(--jetblack);
+  color: var(--alabastergrey);
+}
+
+/* Media queries */
+
+@media screen and (min-width: 640px) {
+  .hero img {
+    border-radius: 1em;
+  }
+
+  .navbar-list li:first-child {
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navbar-list li a:hover {
+    text-decoration: underline;
+  }
+
+  .hero {
+    flex-direction: row;
+  }
+
+  .hero div {
+    margin-left: 1em;
+  }
+
+  .cta-button:hover {
+    background-color: var(--jetblack);
+    color: var(--alabastergrey);
+    border-radius: 0;
+  }
+
+  .description {
+    display: block;
+    color: var(--jetblack);
+    word-break: break-all;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    margin-top: 1em;
+  }
+}
