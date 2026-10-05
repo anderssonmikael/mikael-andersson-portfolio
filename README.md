@@ -21,3 +21,4 @@ Zero errors or warnings through https://validator.w3.org/ and https://validator.
 https://anderssonmikael.github.io/mikael-andersson-portfolio/
 
 Known issues: About page could use better styling, when I built it at the start I tried using flexbox but it didn't turn out the way I wanted it. I will likely rebuild it with grid in the future and add more styling.
+              The text wrapping on the Home page at the 1200px breakpoint doesn't work as intended and cuts words halfway.
